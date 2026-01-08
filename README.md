@@ -47,7 +47,7 @@ $wgIndexNowNotifier_SecretKey = '<YOUR_KEY_HERE>';
 
 ### Logging
 
-This extension uses WikiMedia's build in log channels with key `'IndexNowNotifier'`. You can direct the output of this channel by setting `$wgDebugLogGroups['IndexNowNotifier']`. For example you can use `$wgDebugLogGroups['IndexNowNotifier'] = '/var/www/html/logs/IndexNowNotifier.log'` if you want to direct log output to a file. This may be helpful if you wish to ensure that the extension is working.
+This extension uses WikiMedia's built in log channels with key `'IndexNowNotifier'`. You can direct the output of this channel by setting `$wgDebugLogGroups['IndexNowNotifier']`. For example you can use `$wgDebugLogGroups['IndexNowNotifier'] = '/var/www/html/logs/IndexNowNotifier.log'` if you want to direct log output to a file. This may be helpful if you wish to ensure that the extension is working.
 
 ## Hooks Used
 
