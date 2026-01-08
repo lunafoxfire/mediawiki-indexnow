@@ -1,0 +1,62 @@
+{
+    "name": "IndexNowNotifier",
+    "author": [
+        "lunafox"
+    ],
+    "url": "",
+    "description": "Notifies the IndexNow API whenever a page is updated, for better SEO.",
+    "license-name": "MIT",
+    "type": "other",
+    "requires": {
+        "MediaWiki": ">= 1.40.0"
+    },
+    "manifest_version": 2,
+    "config": {
+        "IndexNowNotifier_SecretKey": {
+            "type": "string",
+            "value": ""
+        },
+        "IndexNowNotifier_IndexNowEndpoint": {
+            "type": "string",
+            "value": "https://api.indexnow.org/indexnow"
+        },
+        "IndexNowNotifier_NotifyCreate": {
+            "type": "bool",
+            "value": true
+        },
+        "IndexNowNotifier_NotifyEdit": {
+            "type": "bool",
+            "value": true
+        },
+        "IndexNowNotifier_NotifyDelete": {
+            "type": "bool",
+            "value": true
+        },
+        "IndexNowNotifier_IgnoreMinor": {
+            "type": "bool",
+            "value": false
+        },
+        "IndexNowNotifier_IgnoreBot": {
+            "type": "bool",
+            "value": true
+        },
+        "IndexNowNotifier_LogLevel": {
+            "type": "string",
+            "value": "info"
+        }
+    },
+    "AutoloadNamespaces": {
+        "MediaWiki\\Extension\\IndexNowNotifier\\": "src/"
+    },
+    "HookHandlers": {
+        "hooks": {
+            "class": "MediaWiki\\Extension\\IndexNowNotifier\\Hooks"
+        }
+    },
+    "Hooks": {
+        "PageSaveComplete": "hooks",
+        "PageDeleteComplete": "hooks",
+        "PageUndeleteComplete": "hooks",
+        "PageMoveComplete": "hooks"
+    }
+}
